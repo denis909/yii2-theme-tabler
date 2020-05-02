@@ -11,21 +11,42 @@ class MainLayout extends \yii\base\Widget
 
     public $breadcrumbs = [];
 
+    public $mainMenu = [];
+
     public $actionMenu = [];
 
     public $footerMenu = [];
 
-    public $footerMenuOptions = [];
-
     public $copyright = 'Copyright © 2019 - {year} <a href="#">My Company</a>.';
+
+    public $enableCard = true;
+
+    public $cardTitle;
+
+    public $userMenu = [];
+
+    public $accountMenu = [];
+
+    public $cart = [];
+
+    public $cartOptions = [];
 
     public function run()
     {
         return $this->render('main-layout', [
-            'content' => $this->content,
             'theme' => $this->theme,
-            'copyright' => str_replace('{year}', date('Y'), $this->copyright),
-            'footerMenu' => $this->theme->footerMenu(array_merge($this->footerMenuOptions, ['items' => $this->footerMenu]))
+            'content' => $this->content,
+            'breadcrumbs' => $this->breadcrumbs,
+            'actionMenu' => $this->actionMenu,
+            'mainMenu' => $this->mainMenu,
+            'cardTitle' => $this->cardTitle,
+            'enableCard' => $this->enableCard,
+            'footerMenu' => $this->footerMenu,
+            'userMenu' => $this->userMenu,
+            'accountMenu' => $this->accountMenu,
+            'cart' => $this->cart,
+            'cartOptions' => $this->cartOptions,
+            'copyright' => str_replace('{year}', date('Y'), $this->copyright)
         ]);
     }
 
