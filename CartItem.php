@@ -11,12 +11,15 @@ class CartItem extends \yii\base\Widget
 
     public $description;
 
+    public $url;
+
     public function run()
     {
         return $this->render('cart-item', [
             'image' => $this->image,
             'description' => $this->description,
-            'title' => $this->title
+            'title' => $this->title,
+            'url' => $this->url
         ]);
     }
 

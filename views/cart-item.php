@@ -1,4 +1,4 @@
-<a href="#" class="dropdown-item d-flex">
+<a href="<?= $url;?>" class="dropdown-item d-flex">
     <?php if($image):?>
         <span class="avatar mr-3 align-self-center" style="background-image: url(<?= $image;?>)"></span>
     <?php endif;?>
