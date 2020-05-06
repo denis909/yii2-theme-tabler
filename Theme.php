@@ -7,6 +7,8 @@ abstract class Theme extends \denis909\bootstrap4\Theme
 
     const GRID_VIEW = GridView::class;
 
+    const DETAIL_VIEW = DetailView::class;
+
     const CARD = Card::class;
 
     const CARD_MENU = CardMenu::class;
