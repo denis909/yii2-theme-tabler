@@ -5,6 +5,8 @@ namespace denis909\themes\tabler;
 abstract class Theme extends \denis909\bootstrap4\Theme
 {
 
+    const GRID_VIEW = GridView::class;
+
     const CARD = Card::class;
 
     const CARD_MENU = CardMenu::class;
