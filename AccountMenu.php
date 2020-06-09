@@ -15,6 +15,6 @@ namespace denis909\themes\tabler;
 
 */
 
-class AccountMenu extends \denis909\yii\Menu
+class AccountMenu extends \denis909\theme\Menu
 {
 }

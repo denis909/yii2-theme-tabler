@@ -2,10 +2,8 @@
 
 namespace denis909\themes\tabler;
 
-class Card extends \yii\base\Widget
+class Card extends \denis909\theme\Card
 {
-
-    public $theme;
 
     public $menu = [];
 
@@ -23,7 +21,6 @@ class Card extends \yii\base\Widget
         }
 
         return $this->render('card', [
-            'theme' => $this->theme,
             'menu' => $this->menu,
             'content' => $this->content,
             'title' => $this->title

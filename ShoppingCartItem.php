@@ -2,7 +2,7 @@
 
 namespace denis909\themes\tabler;
 
-class CartItem extends \yii\base\Widget
+class ShoppingCartItem extends \denis909\theme\ShoppingCartItem
 {
 
     public $image;
@@ -15,7 +15,7 @@ class CartItem extends \yii\base\Widget
 
     public function run()
     {
-        return $this->render('cart-item', [
+        return $this->render('shopping-cart-item', [
             'image' => $this->image,
             'description' => $this->description,
             'title' => $this->title,

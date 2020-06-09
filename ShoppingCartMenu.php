@@ -2,7 +2,7 @@
 
 namespace denis909\themes\tabler;
 
-class CartMenu extends \denis909\yii\Menu
+class ShoppingCartMenu extends \denis909\theme\Menu
 {
 
     public $options = ['tag' => false];

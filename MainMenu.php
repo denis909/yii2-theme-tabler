@@ -54,7 +54,7 @@ namespace denis909\themes\tabler;
   </li>
 </ul>
 */
-class MainMenu extends \denis909\yii\Menu
+class MainMenu extends \denis909\theme\Menu
 {
     
     public $options = ['class' => 'nav nav-tabs border-0 flex-column flex-lg-row'];

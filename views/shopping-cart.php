@@ -4,14 +4,10 @@
         <?php if(count($items) > 0):?><span class="nav-unread"></span><?php endif;?>
     </a>
     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-        <?php if($items):?>
-            <?php foreach($items as $item):?>
-                <?= $theme->cartItem($item);?>
-            <?php endforeach;?>
-        <?php else:?>
-            <?= $theme->cartItem(['description' => $emptyMessage]);?>
-        <?php endif;?>
+        <?php foreach($items as $item):?>
+            <?= $itemClass::widget($item);?>
+        <?php endforeach;?>
         <div class="dropdown-divider"></div>
-        <?= $theme->cartMenu(['items' => $menu]);?>
+        <?= $menu;?>
     </div>
 </div>

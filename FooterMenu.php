@@ -2,7 +2,7 @@
 
 namespace denis909\themes\tabler;
 
-class FooterMenu extends \denis909\yii\Menu
+class FooterMenu extends \denis909\theme\Menu
 {
 
     public $options = ['class' => 'list-inline list-inline-dots mb-0'];

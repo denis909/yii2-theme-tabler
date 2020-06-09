@@ -22,6 +22,6 @@ namespace denis909\themes\tabler;
 
 */
 
-class UserMenu extends \denis909\yii\Menu
+class UserMenu extends \denis909\theme\Menu
 {
 }

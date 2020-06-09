@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-$assets = $theme->registerAssets($this);
+$assets = $assetsClass::register($this);
 
 ?>
 <?php $this->beginPage();?>

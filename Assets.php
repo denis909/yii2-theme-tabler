@@ -4,7 +4,7 @@ namespace denis909\themes\tabler;
 
 use yii\web\View;
 
-class Assets extends \yii\web\AssetBundle
+class Assets extends \denis909\theme\Assets
 {
 
     public $sourcePath = '@vendor/npm-asset/tabler-ui/dist';
