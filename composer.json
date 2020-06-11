@@ -5,5 +5,9 @@
         "psr-4": {
             "denis909\\themes\\tabler\\" : ""
         }
+    },
+    "require": {
+        "denis909/theme": "*",
+        "npm-asset/tabler-ui": "^0.0.34"
     }
 }
