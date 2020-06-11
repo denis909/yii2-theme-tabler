@@ -7,7 +7,7 @@
         }
     },
     "require": {
-        "denis909/theme": "*",
+        "denis909/yii2-theme": "*",
         "npm-asset/tabler-ui": "^0.0.34"
     }
 }
