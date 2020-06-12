@@ -7,7 +7,9 @@
         <?php foreach($items as $item):?>
             <?= $itemClass::widget($item);?>
         <?php endforeach;?>
-        <div class="dropdown-divider"></div>
+        <?php if($items && $menu):?>
+            <div class="dropdown-divider"></div>
+        <?php endif;?>
         <?= $menu;?>
     </div>
 </div>

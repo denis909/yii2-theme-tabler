@@ -27,34 +27,22 @@ class MainLayout extends \yii\base\Widget
 
     public $accountMenu = [];
 
-    public $shoppingCartItems = [];
-
-    public $defaultShoppingCartOptions = [
-        'class' => ShoppingCart::class,
-        'menuClass' => ShoppingCartMenu::class
-    ];
-
-    public $shoppingCartOptions = [];
-
-    public $defaultShoppingCartItemOptions = ['class' => ShippingCartItem::class];
-
-    public $shoppingCartItemOptions = [];
-
     public $defaultLayoutOptions = ['assetsClass' => Assets::class];
 
     public $layoutOptions = [];
 
+    public $shoppingCartClass = ShoppingCart::class; 
+
+    public $shoppingCart = [];
+
+    public $user;
+
+    public $username;
+
+    public $accountDescription;
+
     public function run()
     {
-        $shoppingCartItems = $this->shoppingCartItems;
-
-        foreach($shoppingCartItems as $key => $item)
-        {
-            $shoppingCartItems[$key] = array_merge($this->defaultShoppingCartItemOptions, $this->shoppingCartItemOptions, $item);
-        }
-
-        $shoppingCartOptions = array_merge($this->defaultShoppingCartOptions, $this->shoppingCartOptions);
-
         return $this->render('main-layout', [
             'content' => $this->content,
             'breadcrumbs' => $this->breadcrumbs,
@@ -65,9 +53,12 @@ class MainLayout extends \yii\base\Widget
             'footerMenu' => $this->footerMenu,
             'userMenu' => $this->userMenu,
             'accountMenu' => $this->accountMenu,
-            'shoppingCart' => array_merge($shoppingCartOptions, ['items' => $shoppingCartItems]),
+            'shoppingCart' => array_merge(['class' => $this->shoppingCartClass], $this->shoppingCart),
             'copyright' => str_replace('{year}', date('Y'), $this->copyright),
-            'layoutOptions' => array_merge($this->defaultLayoutOptions, $this->layoutOptions)
+            'layoutOptions' => array_merge($this->defaultLayoutOptions, $this->layoutOptions),
+            'user' => $this->user,
+            'accountDescription' => $this->accountDescription,
+            'username' => $this->username
         ]);
     }
 

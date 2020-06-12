@@ -7,7 +7,9 @@
         }
     },
     "require": {
+        "denis909/yii2-bootstrap4": "*",
         "denis909/yii2-theme": "*",
+        "denis909/yii2-html": "*",
         "npm-asset/tabler-ui": "^0.0.34"
     }
 }

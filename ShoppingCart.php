@@ -30,10 +30,11 @@ class ShoppingCart extends \denis909\theme\ShoppingCart
         $menu = $menuClass::widget($menuOptions);
 
         return $this->render('shopping-cart', [
-            'menu' => $menu,
-            'items' => $this->items,
             'emptyMessage' => $this->emptyMessage,
-            'itemClass' => $this->itemClass
+            'itemClass' => $this->itemClass,
+            'items' => $this->items,
+            'menuClass' => $this->menuClass,
+            'menu' => $menu
         ]);
     }
 

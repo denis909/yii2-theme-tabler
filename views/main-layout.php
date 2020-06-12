@@ -1,5 +1,7 @@
 <?php
 
+use denis909\yii\Html;
+
 use denis909\themes\tabler\Assets;
 use denis909\themes\tabler\ShoppingCart;
 use denis909\themes\tabler\ShoppingCartItem;
@@ -30,22 +32,29 @@ $assets = Assets::register($this);
             </div>
             */
             ?>
-
-            <?= frontend\theme\ShoppingCart::widget($shoppingCart);?>
-
+            <?= ShoppingCart::widget($shoppingCart);?>
             <div class="dropdown">
               <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                <span class="avatar" style="background-image: url(<?= $assets->baseUrl;?>/demo/faces/female/25.jpg)"></span>
+                <?php if(!empty($user->avatarUrl)):?>
+                  <?php /*<?= $assets->baseUrl;?>/demo/faces/female/25.jpg*/ ?>
+                  <span class="avatar" style="background-image: url(<?= $user->avatarUrl;?>)"></span>
+                <?php else:?>
+                  <span class="avatar"></span>
+                <?php endif;?>
                 <span class="ml-2 d-none d-lg-block">
-                  <span class="text-default">Jane Pearson</span>
-                  <small class="text-muted d-block mt-1">Administrator</small>
+                  <?php if($username):?>
+                    <span class="text-default"><?= Html::encode($username);?></span>
+                  <?php endif;?>
+                  <?php if($accountDescription):?>
+                    <small class="text-muted d-block mt-1"><?= Html::encode($accountDescription);?></small>
+                  <?php endif;?>
                 </span>
               </a>
               <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                <?php if($userMenu):?>
                   <?= UserMenu::widget(['items' => $userMenu]);?>
-                  <div class="dropdown-divider"></div>
-                <?php endif;?>
+                  <?php if($userMenu && $accountMenu):?>
+                    <div class="dropdown-divider"></div>
+                  <?php endif;?>
                 <?= AccountMenu::widget(['items' => $accountMenu]);?>
               </div>
             </div>
@@ -76,14 +85,14 @@ $assets = Assets::register($this);
       </div>
     </div>
     <div class="my-3 my-md-5">
-      <div class="container">
-        <?= Card::widget([
-          'enabled' => $enableCard,
-          'title' => $cardTitle,
-          'content' => $content,
-          'menu' => $actionMenu
-        ]);?>
-      </div>
+        <div class="container">
+            <?= Card::widget([
+              'enabled' => $enableCard,
+              'title' => $cardTitle,
+              'content' => $content,
+              'menu' => $actionMenu
+            ]);?>
+        </div>
     </div>
   </div>
   <footer class="footer">

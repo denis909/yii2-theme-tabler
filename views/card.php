@@ -3,7 +3,7 @@
     <div class="card-header">
         <?php if($title):?><h3 class="card-title"><?= $title;?></h3><?php endif;?>
         <?php if($menu):?>
-            <?= yii\base\Widget::widget($menu);?>
+            <?= $menuClass::widget($menu);?>
         <?php endif;?>
     </div>
     <?php endif;?>
