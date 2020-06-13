@@ -89,7 +89,12 @@ $assets = Assets::register($this);
             <?= Card::widget([
               'enabled' => $enableCard,
               'title' => $cardTitle,
-              'content' => $content,
+              'content' => $this->render('_messages', [
+                  'messageClass' => $messageClass,
+                  'infoMessages' => $infoMessages,
+                  'errorMessages' => $errorMessages,
+                  'successMessages' => $successMessages
+              ]) . $content,
               'menu' => $actionMenu
             ]);?>
         </div>
