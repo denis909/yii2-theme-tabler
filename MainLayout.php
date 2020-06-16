@@ -11,23 +11,21 @@ class MainLayout extends \denis909\theme\MainLayout
 
     public $footerMenu = [];
 
+    public $enableShoppingCart = false;
+
     public $shoppingCartClass = ShoppingCart::class; 
 
     public $shoppingCart = [];
 
-    public function getParams()
+    public function run()
     {
-        return array_merge(parent::getParams(), [
+        return $this->render('main-layout', array_merge($this->params, [
             'enableCard' => $this->enableCard,
             'shoppingCart' => $this->shoppingCart,
             'shoppingCartClass' => $this->shoppingCartClass,
-            'footerMenu' => $this->footerMenu
-        ]);
-    }
-
-    public function run()
-    {
-        return $this->render('main-layout', $this->params);
+            'footerMenu' => $this->footerMenu,
+            'enableShoppingCart' => $this->enableShoppingCart
+        ]));
     }
 
 }
