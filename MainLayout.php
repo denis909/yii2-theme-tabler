@@ -17,6 +17,8 @@ class MainLayout extends \denis909\theme\MainLayout
 
     public $shoppingCart = [];
 
+    public $avatarUrl;
+
     public function run()
     {
         return $this->render('main-layout', array_merge($this->params, [

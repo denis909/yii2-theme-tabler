@@ -13,8 +13,22 @@ class Card extends \denis909\theme\Card
 
     public $enabled = true;
 
+    public function init()
+    {
+        parent::init();
+    
+        ob_start();
+    }
+
     public function run()
     {
+        $content = ob_get_clean();
+
+        if (!$content && $this->content)
+        {
+            $content = $this->content;
+        }
+
         if (!$this->enabled)
         {
             return $content;
@@ -22,7 +36,7 @@ class Card extends \denis909\theme\Card
 
         return $this->render('card', [
             'menu' => $this->menu,
-            'content' => $this->content,
+            'content' => $content,
             'title' => $this->title
         ]);
     }
