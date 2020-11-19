@@ -7,9 +7,9 @@
         }
     },
     "require": {
+        "npm-asset/tabler-ui": "*",
         "denis909/yii2-bootstrap4": "*",
         "denis909/yii2-theme": "*",
-        "denis909/yii2-html": "*",
-        "npm-asset/tabler-core": "*"
+        "denis909/yii2-html": "*"
     }
 }
