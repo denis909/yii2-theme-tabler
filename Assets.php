@@ -7,7 +7,7 @@ use yii\web\View;
 class Assets extends \denis909\theme\Assets
 {
 
-    public $sourcePath = '@vendor/npm-asset/tabler-ui/dist';
+    public $sourcePath = '@vendor/npm-asset/tabler/core/dist';
     
     public $css = [
         ['assets/css/dashboard.css', 'position' => View::POS_HEAD],
