@@ -15,8 +15,10 @@ class CardView extends \denis909\theme\ListView
 
     public $itemsLayout = '<div class="row row-cards">{items}</div>';
 
-    public $layout = '<div class="page-header">{caption}{summary}</div>{items}{pager}';
+    public $layout = '<div class="page-header">{caption}{summary}</div>{filter}{items}{pager}';
 
     public $summaryLayout = '<div class="page-subtitle">{summary}</div>';
+
+    public $filterLayout = '<div class="mb-4">{filter}</div>';
 
 }

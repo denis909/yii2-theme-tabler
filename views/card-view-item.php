@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 
 ?>
+
 <div class="col-sm-6 col-lg-3">
     <div class="card p-3">
         <?php if($image):?>

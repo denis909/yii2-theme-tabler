@@ -7,11 +7,15 @@ use yii\helper\ArrayHelper;
 class MainLayout extends \denis909\theme\MainLayout
 {
 
+    public $mainMenuClass = MainMenu::class;
+
     public $enableCard = true;
 
-    public $footerMenu = [];
+    public $searchClass = Search::class;
 
-    public $enableShoppingCart = false;
+    public $search = [];
+
+    public $footerMenu = [];
 
     public $shoppingCartClass = ShoppingCart::class; 
 
@@ -26,7 +30,8 @@ class MainLayout extends \denis909\theme\MainLayout
             'shoppingCart' => $this->shoppingCart,
             'shoppingCartClass' => $this->shoppingCartClass,
             'footerMenu' => $this->footerMenu,
-            'enableShoppingCart' => $this->enableShoppingCart
+            'searchClass' => $this->searchClass,
+            'search' => $this->search
         ]));
     }
 
