@@ -21,4 +21,6 @@ class CardView extends \denis909\theme\ListView
 
     public $filterLayout = '<div class="mb-4">{filter}</div>';
 
+    public $sorter = ['class' => DropdownSorter::class];
+
 }
