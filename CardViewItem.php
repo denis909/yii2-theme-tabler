@@ -20,6 +20,8 @@ class CardViewItem extends \yii\base\Widget
    
     public $description;
 
+    public $price;
+
     public function run()
     {
         $imageOptions = ArrayHelper::merge($this->defaultImageOptions, $this->imageOptions);
@@ -29,7 +31,8 @@ class CardViewItem extends \yii\base\Widget
             'name' => $this->name,
             'image' => $this->image,
             'description' => $this->description,
-            'imageOptions' => $imageOptions
+            'imageOptions' => $imageOptions,
+            'price' => $this->price
         ]);
     }
 
