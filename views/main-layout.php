@@ -62,6 +62,9 @@ $assets = Assets::register($this);
     </div>
     <div class="my-3 my-md-5">
         <div class="container">
+
+            <?= yii\bootstrap4\Breadcrumbs::widget(['links' => $breadcrumbs]);?>
+
         <?php 
 
             $card = Card::begin([
